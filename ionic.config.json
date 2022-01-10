@@ -1,0 +1,7 @@
+{
+  "name": "disney",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
