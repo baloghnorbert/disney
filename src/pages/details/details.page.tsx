@@ -3,12 +3,10 @@ import "./details.style.css"
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import React from "react";
 import { useEffect, useState } from "react";
-import { IonCard, IonHeader, IonCardTitle, IonText, IonCardSubtitle, IonCardContent, IonPage, IonToolbar, IonTitle, IonContent, IonAvatar, IonCardHeader } from "@ionic/react";
-import Loader from "react-loader-spinner";
+import { IonCard, IonHeader, IonCardTitle, IonText, IonCardSubtitle, IonPage, IonToolbar, IonTitle, IonContent, IonCardHeader } from "@ionic/react";
 import { ICharachterData } from "./../../model/character";
 import { CharachterService } from "./../../service/http";
 import LoaderComponent from "../../components/Loader";
-import CharachterComponent from "../../components/character.component";
 import CharachterDetailComponent from "../../components/character.detail.component";
 
 interface IProps extends RouteComponentProps<{ id: string }> {
@@ -43,7 +41,6 @@ const DetailPage: React.FC<IProps> = (props: IProps): JSX.Element => {
                 <CharachterDetailComponent label="VIDEO GAMES" films={character?.videoGames!}></CharachterDetailComponent>
                 <CharachterDetailComponent label="PARK ATTRACTIONS" films={character?.parkAttractions!}></CharachterDetailComponent>
             </IonCardHeader>
-
         </IonCard>
 
     return (
